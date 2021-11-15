@@ -9,27 +9,98 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-.navbar {
-  height: 400px;
-}
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-nav li {
-  font-family: 'Alice', serif;
-  list-style: none;
-  margin-left: 5px;
-  text-decoration: none;
-}
-.nav-item .active {
-  font-weight: 700;
-  color: red;
+
+/*whole page styles */
+
+@font-face {
+  font-family: Arvo;
+  src: url('/sarahs-theme/fonts/Mistrully.woff');
+  font-weight: normal;
 }
 body {
   font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
 }
+.container {
+  max-width: 1000px;
+  padding: 0 1.4rem;
+  margin: 0 auto;
+}
+/* navbar/header styles */
+
+#navbar-div {
+  margin: 0;
+  height: 200px;
+  background-color: #572e18;
+  display: flex;
+  width: 100vw;
+}
+
+.logo-div img {
+  max-height: 200px;
+}
+
+#navlist {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+#navlist li {
+  flex: auto;
+  text-align: right;
+  padding: 1.4em;
+  font-family: 'Mistrully', serif;
+  font-size: 3em;
+}
+#navbar-div a {
+  text-decoration: none;
+  color: #e3dbd2;
+}
+#navbar-div .active a {
+  color: #e0786d;
+}
+#toggle-nav {
+  display: none;
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  font-size: 1.8em;
+}
+#toggle-nav i {
+  color: #e3dbd2;
+}
+@media all and (max-width: 1220px) {
+  #navlist li {
+    font-size: 1.4em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #navbar-div {
+    padding: 1.6em;
+  }
+  #navlist {
+    flex-direction: column;
+    display: none;
+  }
+  #toggle-nav {
+    display: block;
+    color: #e3dbd2;
+  }
+  #navlist li {
+    font-family: 'Alice', serif;
+    font-size: 1.5em;
+    padding: 0.3em;
+  }
+}
+
+/* front page styles*/
 body p {
   max-width: 70%;
   margin-left: 10%;

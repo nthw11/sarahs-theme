@@ -1,0 +1,28 @@
+<?php
+get_header();
+
+while (have_posts()) {
+  the_post(); ?>
+  <div id="front-page-main">
+
+    <div class="container" id="index-page-body">
+      <div class="row">
+
+        <div class="col-sm-8 offset-md-2">
+          <h1><?php the_title(); ?></h1>
+          <p><?php the_content(); ?></p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum praesentium iste nobis nesciunt ab at, repellat soluta quam cupiditate blanditiis placeat corporis mollitia officia voluptatem! Laboriosam, animi dolorum! Vel, dolor.
+            Perspiciatis itaque possimus fugiat rem voluptates soluta eum at, delectus animi ullam doloribus quos dolorum est qui nobis quia. Ipsam exercitationem ut explicabo! Mollitia sequi odit, numquam provident molestiae magnam.
+            Ipsam natus eum quae animi repellendus quia asperiores accusantium iure, autem distinctio aliquam explicabo. Quia, perferendis minima rem a fuga similique soluta sequi consequuntur nihil neque illum unde rerum vero?
+            Cupiditate et nulla maxime accusantium possimus sed modi, eos reprehenderit, fugit sapiente porro a vitae hic beatae tenetur rem optio repellat ea amet. Expedita consequatur, tempora aspernatur aperiam quo sint!
+            Ratione non dolor doloremque quidem? Autem quidem, et nisi, veniam nulla ea voluptas, laboriosam aliquid enim corporis mollitia quas labore asperiores suscipit laudantium ducimus vitae ut. Fugiat omnis esse quam.</p>
+        </div><!-- col -->
+      </div><!-- row -->
+    </div><!-- container-->
+  </div><!-- #front-page-main -->
+
+<?php
+}
+
+get_footer();
+?>
